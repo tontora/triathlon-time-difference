@@ -1,21 +1,47 @@
 <script lang="ts">
-	let startTime = new Date();
-	let spreadTime: number;
+	import dayjs from 'dayjs';
+	import { Button, RadioButton, RadioButtonGroup } from 'carbon-components-svelte';
+	let startTime = dayjs();
+	let spreadTime = 0;
+	let isStarted = false;
+	let gender: 'men|women;';
 
 	function getTime() {
-		return new Date().getTime() - startTime.getTime();
-	}
-	function timeConvertToString(time: number) {
-		return `${Math.floor(time / (1000 * 60 * 60))}:${Math.floor(time / (1000 * 60))}:${
-			Math.floor(time / 1000) % 60
-		}`;
+		return dayjs().diff(startTime, 'second', true);
 	}
 
-	setInterval(() => {
-		spreadTime = getTime();
-	}, 1000);
+	function timeToString(timeBySeconds: number) {
+		return dayjs(timeBySeconds * 1000)
+			.subtract(9, 'hour')
+			.format('H:mm:ss');
+	}
 </script>
 
-<div>
-	<p>{timeConvertToString(spreadTime)}</p>
+<div class="control">
+	<span>{timeToString(spreadTime)}</span>
+	<div class="radio">
+		<RadioButtonGroup bind:selected={gender}>
+			<RadioButton labelText="女" value="women" />
+			<RadioButton labelText="男" value="men" />
+		</RadioButtonGroup>
+	</div>
+	<Button
+		disabled={isStarted}
+		on:click={() => {
+			isStarted = true;
+			startTime = dayjs();
+			setInterval(() => {
+				spreadTime = getTime();
+			}, 1000);
+		}}>スタート</Button
+	>
 </div>
+
+<style>
+	.control {
+		margin: 0.5rem;
+	}
+	.radio {
+		display: inline-block;
+	}
+</style>
