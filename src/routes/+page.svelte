@@ -1,2 +1,21 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+	let startTime = new Date();
+	let spreadTime: number;
+
+	function getTime() {
+		return new Date().getTime() - startTime.getTime();
+	}
+	function timeConvertToString(time: number) {
+		return `${Math.floor(time / (1000 * 60 * 60))}:${Math.floor(time / (1000 * 60))}:${
+			Math.floor(time / 1000) % 60
+		}`;
+	}
+
+	setInterval(() => {
+		spreadTime = getTime();
+	}, 1000);
+</script>
+
+<div>
+	<p>{timeConvertToString(spreadTime)}</p>
+</div>
