@@ -1,7 +1,7 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 
-const isDev = process.env.IS_DEVELOPMENT;
+const dev = process.argv.includes('dev');
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -11,9 +11,9 @@ const config = {
 
 	kit: {
 		appDir: 'app',
-		adapter: adapter(),
+		adapter: adapter({ fallback: 'index.html' }),
 		paths: {
-			base: isDev ? '' : '/triathlon-time-difference',
+			base: dev ? '' : '/triathlon-time-difference',
 		},
 	},
 };
