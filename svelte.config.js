@@ -10,6 +10,7 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
+		appDir: 'app',
 		adapter: adapter(),
 		paths: {
 			base: isDev ? '' : '/triathlon-time-difference',
