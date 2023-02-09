@@ -3,14 +3,18 @@
 	import { Button, ComboBox, RadioButton, RadioButtonGroup } from 'carbon-components-svelte';
 	import { startListMen } from './start-list-men';
 	import { startListWomen } from './start-list-women';
+
 	let startTime = dayjs();
-	let spreadTime = 0;
+	let displayTime = 0;
 	let isStarted = false;
 	let gender: 'men' | 'women' | undefined;
+	let selectedAthleteId: string | undefined;
+
+	let splitTimes: Record<string, number[]> = {};
 
 	const startLists = { men: startListMen, women: startListWomen };
 
-	function getTime() {
+	function getElapsedTime() {
 		return dayjs().diff(startTime, 'second', true);
 	}
 
@@ -19,26 +23,34 @@
 			.subtract(9, 'hour')
 			.format('H:mm:ss');
 	}
+
+	function initialize() {
+		for (let item of startLists[gender!]) {
+			splitTimes[item.id] = [];
+		}
+		isStarted = true;
+		startTime = dayjs();
+		setInterval(() => {
+			displayTime = getElapsedTime();
+		}, 1000);
+	}
+
+	function passage() {
+		splitTimes[selectedAthleteId!].push(getElapsedTime());
+		selectedAthleteId = undefined;
+		splitTimes = splitTimes;
+	}
 </script>
 
 <div class="control">
-	<span>{timeToString(spreadTime)}</span>
+	<span>{timeToString(displayTime)}</span>
 	<div class="radio">
-		<RadioButtonGroup bind:selected={gender}>
+		<RadioButtonGroup disabled={isStarted} bind:selected={gender}>
 			<RadioButton labelText="女" value="women" />
 			<RadioButton labelText="男" value="men" />
 		</RadioButtonGroup>
 	</div>
-	<Button
-		disabled={isStarted || !gender}
-		on:click={() => {
-			isStarted = true;
-			startTime = dayjs();
-			setInterval(() => {
-				spreadTime = getTime();
-			}, 1000);
-		}}>スタート</Button
-	>
+	<Button disabled={isStarted || !gender} on:click={initialize}>スタート</Button>
 </div>
 <div class="input-box">
 	<ComboBox
@@ -53,8 +65,9 @@
 			return item.text.split(':')[1].includes(value) || String(item.id).indexOf(value) === 0;
 		}}
 		disabled={!isStarted}
+		bind:selectedId={selectedAthleteId}
 	/>
-	<Button>通過</Button>
+	<Button disabled={!selectedAthleteId} on:click={passage}>通過</Button>
 </div>
 
 <style>
