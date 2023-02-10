@@ -21,7 +21,7 @@ export const startListMen = [
 		firstName: '哲平',
 		gender: '男',
 		age: '21',
-		team: '早稲田大学・ロンドスポーツ',
+		team: '早稲田大学',
 	},
 	{
 		id: '4',

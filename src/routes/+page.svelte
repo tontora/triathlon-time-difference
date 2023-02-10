@@ -1,18 +1,40 @@
 <script lang="ts">
 	import dayjs from 'dayjs';
-	import { Button, ComboBox, RadioButton, RadioButtonGroup } from 'carbon-components-svelte';
+	import {
+		Button,
+		ComboBox,
+		DataTable,
+		RadioButton,
+		RadioButtonGroup,
+	} from 'carbon-components-svelte';
 	import { startListMen } from './start-list-men';
 	import { startListWomen } from './start-list-women';
+	import { UniversityRow } from './university-list';
 
+	const startLists = { men: startListMen, women: startListWomen };
+
+	// 最大周回数
+	const maxCount = 6;
 	let startTime = dayjs();
 	let displayTime = 0;
 	let isStarted = false;
 	let gender: 'men' | 'women' | undefined;
 	let selectedAthleteId: string | undefined;
-
 	let splitTimes: Record<string, number[]> = {};
+	let universityRows: UniversityRow[] = [];
 
-	const startLists = { men: startListMen, women: startListWomen };
+	$: startList = (gender ? startLists[gender] : []).map((x) => ({
+		...x,
+		name: `${x.lastName} ${x.firstName}`,
+	}));
+
+	$: tableHeaders = [
+		{ key: 'name', value: '大学' },
+		...[...Array(maxCount)].map((_item, index) => ({
+			key: `time${index}`,
+			value: String(index),
+		})),
+	];
 
 	function getElapsedTime() {
 		return dayjs().diff(startTime, 'second', true);
@@ -25,9 +47,12 @@
 	}
 
 	function initialize() {
-		for (let item of startLists[gender!]) {
-			splitTimes[item.id] = [];
+		for (const item of startList) {
+			if (!universityRows.find((x) => x.name === item.team))
+				universityRows.push(new UniversityRow(item.team));
+			universityRows.find((x) => x.name === item.team)?.addAthlete(item.name);
 		}
+		universityRows = universityRows;
 		isStarted = true;
 		startTime = dayjs();
 		setInterval(() => {
@@ -37,8 +62,28 @@
 
 	function passage() {
 		splitTimes[selectedAthleteId!].push(getElapsedTime());
+		const athlete = startList[Number(selectedAthleteId) - 1];
 		selectedAthleteId = undefined;
 		splitTimes = splitTimes;
+	}
+
+	function filterRow(rows: UniversityRow[]) {
+		return rows.filter(
+			(university) => university.athletes.length >= 3 && university.name.includes('大学'),
+		);
+	}
+
+	function convertTableRow(rows: UniversityRow[]) {
+		return rows.map((row, index) => {
+			let rowObject: Record<string, string> & { id: string } = {
+				name: row.name.slice(0, -2),
+				id: String(index),
+			};
+			for (let i = 0; i < maxCount; i++) {
+				rowObject[`time${i}`] = String(row.getTeamTime(i) ?? '');
+			}
+			return rowObject;
+		});
 	}
 </script>
 
@@ -52,12 +97,19 @@
 	</div>
 	<Button disabled={isStarted || !gender} on:click={initialize}>スタート</Button>
 </div>
+
+<DataTable
+	size="compact"
+	rows={convertTableRow(filterRow(universityRows))}
+	headers={tableHeaders ?? []}
+/>
+
 <div class="input-box">
 	<ComboBox
 		placeholder="No. or name"
-		items={(gender ? startLists[gender] : []).map((item) => ({
+		items={startList.map((item) => ({
 			...item,
-			text: `${item.id}: ${item.lastName} ${item.firstName} : ${item.team}`,
+			text: `${item.id}: ${item.name} : ${item.team}`,
 			key: item.id,
 		}))}
 		shouldFilterItem={(item, value) => {
@@ -81,5 +133,6 @@
 
 	.input-box {
 		display: flex;
+		margin-top: 1rem;
 	}
 </style>
