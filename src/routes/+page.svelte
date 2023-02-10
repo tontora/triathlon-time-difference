@@ -61,7 +61,7 @@
 	}
 
 	function passage() {
-		const athlete = startList[Number(selectedAthleteId) - 1];
+		const athlete = startList.find((x) => x.id === selectedAthleteId)!;
 		universityRows
 			.find((university) => university.name === athlete.team)
 			?.setAthleteTime({ name: athlete.name, time: getElapsedTime() });
