@@ -9,8 +9,13 @@ export class UniversityRow {
 	addAthlete(athleteName: string) {
 		this.athletes.push({ name: athleteName, splitTimes: [] });
 	}
+
 	setAthleteTime({ athleteName, time }: { athleteName: string; time: number }) {
 		this.athletes.find((x) => x.name === athleteName)?.splitTimes.push(time);
+	}
+
+	getTeamTime(count: number): number | undefined {
+		return -1;
 	}
 }
 

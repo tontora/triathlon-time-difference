@@ -1,6 +1,12 @@
 <script lang="ts">
 	import dayjs from 'dayjs';
-	import { Button, ComboBox, RadioButton, RadioButtonGroup } from 'carbon-components-svelte';
+	import {
+		Button,
+		ComboBox,
+		DataTable,
+		RadioButton,
+		RadioButtonGroup,
+	} from 'carbon-components-svelte';
 	import { startListMen } from './start-list-men';
 	import { startListWomen } from './start-list-women';
 	import { UniversityRow } from './university-list';
@@ -21,6 +27,14 @@
 		...x,
 		name: `${x.lastName} ${x.firstName}`,
 	}));
+
+	$: tableHeaders = [
+		{ key: 'name', value: '大学' },
+		...[...Array(maxCount)].map((_item, index) => ({
+			key: `time${index}`,
+			value: String(index),
+		})),
+	];
 
 	function getElapsedTime() {
 		return dayjs().diff(startTime, 'second', true);
@@ -58,6 +72,19 @@
 			(university) => university.athletes.length >= 3 && university.name.includes('大学'),
 		);
 	}
+
+	function convertTableRow(rows: UniversityRow[]) {
+		return rows.map((row, index) => {
+			let rowObject: Record<string, string> & { id: string } = {
+				name: row.name.slice(0, -2),
+				id: String(index),
+			};
+			for (let i = 0; i < maxCount; i++) {
+				rowObject[`time${i}`] = String(row.getTeamTime(i) ?? '');
+			}
+			return rowObject;
+		});
+	}
 </script>
 
 <div class="control">
@@ -70,6 +97,13 @@
 	</div>
 	<Button disabled={isStarted || !gender} on:click={initialize}>スタート</Button>
 </div>
+
+<DataTable
+	size="compact"
+	rows={convertTableRow(filterRow(universityRows))}
+	headers={tableHeaders ?? []}
+/>
+
 <div class="input-box">
 	<ComboBox
 		placeholder="No. or name"
@@ -99,5 +133,6 @@
 
 	.input-box {
 		display: flex;
+		margin-top: 1rem;
 	}
 </style>
