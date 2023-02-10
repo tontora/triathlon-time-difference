@@ -17,7 +17,10 @@
 	let splitTimes: Record<string, number[]> = {};
 	let universityRows: UniversityRow[] = [];
 
-	$: startList = gender ? startLists[gender] : [];
+	$: startList = (gender ? startLists[gender] : []).map((x) => ({
+		...x,
+		name: `${x.lastName} ${x.firstName}`,
+	}));
 
 	function getElapsedTime() {
 		return dayjs().diff(startTime, 'second', true);
@@ -33,7 +36,7 @@
 		for (const item of startList) {
 			if (!universityRows.find((x) => x.name === item.team))
 				universityRows.push(new UniversityRow(item.team));
-			universityRows.find((x) => x.name === item.team)?.addAthlete(getName(item));
+			universityRows.find((x) => x.name === item.team)?.addAthlete(item.name);
 		}
 		universityRows = universityRows;
 		isStarted = true;
@@ -55,10 +58,6 @@
 			(university) => university.athletes.length >= 3 && university.name.includes('大学'),
 		);
 	}
-
-	function getName({ lastName, firstName }: { lastName: string; firstName: string }) {
-		return `${lastName} ${firstName}`;
-	}
 </script>
 
 <div class="control">
@@ -76,7 +75,7 @@
 		placeholder="No. or name"
 		items={startList.map((item) => ({
 			...item,
-			text: `${item.id}: ${getName(item)} : ${item.team}`,
+			text: `${item.id}: ${item.name} : ${item.team}`,
 			key: item.id,
 		}))}
 		shouldFilterItem={(item, value) => {
