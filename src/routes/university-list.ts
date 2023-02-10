@@ -6,20 +6,28 @@ export class UniversityRow {
 		this.athletes = [];
 	}
 
-	addAthlete(athleteName: string) {
-		this.athletes.push({ name: athleteName, splitTimes: [] });
+	addAthlete({ name }: { name: string }) {
+		this.athletes.push({ name: name, splitTimes: [] });
 	}
 
-	setAthleteTime({ athleteName, time }: { athleteName: string; time: number }) {
+	setAthleteTime({ name: athleteName, time }: { name: string; time: number }) {
 		this.athletes.find((x) => x.name === athleteName)?.splitTimes.push(time);
 	}
 
-	getTeamTime(count: number): number | undefined {
-		return -1;
+	getTeamTime(count: number): { time: number } | undefined {
+		const sortedTimes: (number | undefined)[] = this.athletes
+			.map((x) => x.splitTimes[count])
+			.filter((x) => x)
+			.sort((a, b) => a! - b!);
+		if (!sortedTimes[2]) return;
+		const threeAthletes = sortedTimes.slice(0, 3);
+		return {
+			time: threeAthletes.map((x) => x).reduce((sum, element) => sum! + element!)!,
+		};
 	}
 }
 
 type Athlete = {
 	name: string;
-	splitTimes: number[];
+	splitTimes: (number | undefined)[];
 };

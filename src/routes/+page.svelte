@@ -20,7 +20,6 @@
 	let isStarted = false;
 	let gender: 'men' | 'women' | undefined;
 	let selectedAthleteId: string | undefined;
-	let splitTimes: Record<string, number[]> = {};
 	let universityRows: UniversityRow[] = [];
 
 	$: startList = (gender ? startLists[gender] : []).map((x) => ({
@@ -40,7 +39,8 @@
 		return dayjs().diff(startTime, 'second', true);
 	}
 
-	function timeToString(timeBySeconds: number) {
+	function timeToString(timeBySeconds: number | undefined) {
+		if (timeBySeconds == undefined) return '';
 		return dayjs(timeBySeconds * 1000)
 			.subtract(9, 'hour')
 			.format('H:mm:ss');
@@ -50,7 +50,7 @@
 		for (const item of startList) {
 			if (!universityRows.find((x) => x.name === item.team))
 				universityRows.push(new UniversityRow(item.team));
-			universityRows.find((x) => x.name === item.team)?.addAthlete(item.name);
+			universityRows.find((x) => x.name === item.team)?.addAthlete(item);
 		}
 		universityRows = universityRows;
 		isStarted = true;
@@ -61,10 +61,12 @@
 	}
 
 	function passage() {
-		splitTimes[selectedAthleteId!].push(getElapsedTime());
 		const athlete = startList[Number(selectedAthleteId) - 1];
+		universityRows
+			.find((university) => university.name === athlete.team)
+			?.setAthleteTime({ name: athlete.name, time: getElapsedTime() });
 		selectedAthleteId = undefined;
-		splitTimes = splitTimes;
+		universityRows = universityRows;
 	}
 
 	function filterRow(rows: UniversityRow[]) {
@@ -80,7 +82,7 @@
 				id: String(index),
 			};
 			for (let i = 0; i < maxCount; i++) {
-				rowObject[`time${i}`] = String(row.getTeamTime(i) ?? '');
+				rowObject[`time${i}`] = timeToString(row.getTeamTime(i)?.time);
 			}
 			return rowObject;
 		});
