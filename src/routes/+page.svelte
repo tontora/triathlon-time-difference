@@ -21,6 +21,8 @@
 	let gender: 'men' | 'women' | undefined;
 	let selectedAthleteId: string | undefined;
 	let universityRows: UniversityRow[] = [];
+	// 団体に絡む選手のみ表示するか
+	let filteringCondition: 'all' | 'teamCompetition' = 'all';
 
 	$: startList = (gender ? startLists[gender] : []).map((x) => ({
 		...x,
@@ -122,6 +124,12 @@
 		bind:selectedId={selectedAthleteId}
 	/>
 	<Button disabled={!selectedAthleteId} on:click={passage}>通過</Button>
+	<div class="filter-radio-button">
+		<RadioButtonGroup bind:selected={filteringCondition}>
+			<RadioButton labelText="全員" value="all" />
+			<RadioButton labelText="団体のみ" value="teamCompetition" />
+		</RadioButtonGroup>
+	</div>
 </div>
 
 <style>
@@ -136,5 +144,11 @@
 	.input-box {
 		display: flex;
 		margin-top: 1rem;
+		display: grid;
+		grid-template-columns: 80% 20%;
+	}
+
+	.input-box .filter-radio-button {
+		grid-column-start: 2;
 	}
 </style>
