@@ -17,7 +17,7 @@ jobs:
 
       # package.jsonの内容でパッケージインストール
       - name: setup app env
-        run: npm i
+        run: npm ci
 
       - name: lint
         run: npm run lint
