@@ -5,7 +5,7 @@ export const startListMen = [
 		firstName: '祐哉',
 		gender: '男',
 		age: '44',
-		team: '東京都トライアスロン連合',
+		team: '東京都トライアスロン連合'
 	},
 	{
 		id: '2',
@@ -13,7 +13,7 @@ export const startListMen = [
 		firstName: '錬',
 		gender: '男',
 		age: '28',
-		team: '玉昌会（鹿児島）',
+		team: '玉昌会（鹿児島）'
 	},
 	{
 		id: '3',
@@ -21,7 +21,7 @@ export const startListMen = [
 		firstName: '哲平',
 		gender: '男',
 		age: '21',
-		team: '早稲田大学',
+		team: '早稲田大学'
 	},
 	{
 		id: '4',
@@ -29,7 +29,7 @@ export const startListMen = [
 		firstName: '光輝',
 		gender: '男',
 		age: '26',
-		team: '千葉県トライアスロン連合',
+		team: '千葉県トライアスロン連合'
 	},
 	{
 		id: '5',
@@ -37,7 +37,7 @@ export const startListMen = [
 		firstName: '穂高',
 		gender: '男',
 		age: '26',
-		team: '千葉県トライアスロン連合',
+		team: '千葉県トライアスロン連合'
 	},
 	{
 		id: '6',
@@ -45,7 +45,7 @@ export const startListMen = [
 		firstName: '拳真',
 		gender: '男',
 		age: '24',
-		team: '愛知県トライアスロン協会',
+		team: '愛知県トライアスロン協会'
 	},
 	{
 		id: '7',
@@ -53,7 +53,7 @@ export const startListMen = [
 		firstName: '一博',
 		gender: '男',
 		age: '25',
-		team: 'トヨタ自動車（愛知）',
+		team: 'トヨタ自動車（愛知）'
 	},
 	{
 		id: '8',
@@ -61,7 +61,7 @@ export const startListMen = [
 		firstName: '俊太朗',
 		gender: '男',
 		age: '23',
-		team: '東北大学',
+		team: '東北大学'
 	},
 	{
 		id: '9',
@@ -69,7 +69,7 @@ export const startListMen = [
 		firstName: '利心',
 		gender: '男',
 		age: '19',
-		team: '石川県トライアスロン協会',
+		team: '石川県トライアスロン協会'
 	},
 	{
 		id: '10',
@@ -77,7 +77,7 @@ export const startListMen = [
 		firstName: '秀吾',
 		gender: '男',
 		age: '23',
-		team: '日本体育大学',
+		team: '日本体育大学'
 	},
 	{
 		id: '11',
@@ -85,7 +85,7 @@ export const startListMen = [
 		firstName: '旺',
 		gender: '男',
 		age: '22',
-		team: '日本体育大学',
+		team: '日本体育大学'
 	},
 	{
 		id: '12',
@@ -93,7 +93,7 @@ export const startListMen = [
 		firstName: '空知',
 		gender: '男',
 		age: '21',
-		team: '立命館大学',
+		team: '立命館大学'
 	},
 	{
 		id: '13',
@@ -101,7 +101,7 @@ export const startListMen = [
 		firstName: '恵太',
 		gender: '男',
 		age: '24',
-		team: '千葉県トライアスロン連合',
+		team: '千葉県トライアスロン連合'
 	},
 	{
 		id: '14',
@@ -109,7 +109,7 @@ export const startListMen = [
 		firstName: '祐也',
 		gender: '男',
 		age: '24',
-		team: '日本大学',
+		team: '日本大学'
 	},
 	{
 		id: '15',
@@ -117,7 +117,7 @@ export const startListMen = [
 		firstName: '信',
 		gender: '男',
 		age: '23',
-		team: '日本大学',
+		team: '日本大学'
 	},
 	{
 		id: '16',
@@ -125,7 +125,7 @@ export const startListMen = [
 		firstName: '輝向',
 		gender: '男',
 		age: '20',
-		team: '日本体育大学',
+		team: '日本体育大学'
 	},
 	{
 		id: '17',
@@ -133,7 +133,7 @@ export const startListMen = [
 		firstName: '文也',
 		gender: '男',
 		age: '32',
-		team: '神奈川県トライアスロン連合',
+		team: '神奈川県トライアスロン連合'
 	},
 	{
 		id: '18',
@@ -141,7 +141,7 @@ export const startListMen = [
 		firstName: '裕樹',
 		gender: '男',
 		age: '23',
-		team: '日本大学',
+		team: '日本大学'
 	},
 	{
 		id: '19',
@@ -149,7 +149,7 @@ export const startListMen = [
 		firstName: '倫太郎',
 		gender: '男',
 		age: '18',
-		team: '埼玉県トライアスロン連合',
+		team: '埼玉県トライアスロン連合'
 	},
 	{
 		id: '20',
@@ -157,7 +157,7 @@ export const startListMen = [
 		firstName: '尚大',
 		gender: '男',
 		age: '20',
-		team: '大阪体育大学',
+		team: '大阪体育大学'
 	},
 	{
 		id: '21',
@@ -165,7 +165,7 @@ export const startListMen = [
 		firstName: '柊仁',
 		gender: '男',
 		age: '20',
-		team: '東海大学',
+		team: '東海大学'
 	},
 	{
 		id: '22',
@@ -173,7 +173,7 @@ export const startListMen = [
 		firstName: '翔大',
 		gender: '男',
 		age: '19',
-		team: '東海大学',
+		team: '東海大学'
 	},
 	{
 		id: '23',
@@ -181,7 +181,7 @@ export const startListMen = [
 		firstName: '涼太',
 		gender: '男',
 		age: '23',
-		team: '東海大学',
+		team: '東海大学'
 	},
 	{
 		id: '24',
@@ -189,7 +189,7 @@ export const startListMen = [
 		firstName: '慶大',
 		gender: '男',
 		age: '20',
-		team: '東北大学',
+		team: '東北大学'
 	},
 	{
 		id: '25',
@@ -197,7 +197,7 @@ export const startListMen = [
 		firstName: '一真',
 		gender: '男',
 		age: '22',
-		team: '大阪体育大学',
+		team: '大阪体育大学'
 	},
 	{
 		id: '26',
@@ -205,7 +205,7 @@ export const startListMen = [
 		firstName: '健',
 		gender: '男',
 		age: '42',
-		team: '山形県トライアスロン協会',
+		team: '山形県トライアスロン協会'
 	},
 	{
 		id: '27',
@@ -213,7 +213,7 @@ export const startListMen = [
 		firstName: '秀輔',
 		gender: '男',
 		age: '20',
-		team: '東北大学',
+		team: '東北大学'
 	},
 	{
 		id: '28',
@@ -221,7 +221,7 @@ export const startListMen = [
 		firstName: '太一',
 		gender: '男',
 		age: '21',
-		team: '早稲田大学',
+		team: '早稲田大学'
 	},
 	{
 		id: '29',
@@ -229,7 +229,7 @@ export const startListMen = [
 		firstName: '昌孝',
 		gender: '男',
 		age: '42',
-		team: '神奈川県トライアスロン連合',
+		team: '神奈川県トライアスロン連合'
 	},
 	{
 		id: '30',
@@ -237,7 +237,7 @@ export const startListMen = [
 		firstName: '龍一',
 		gender: '男',
 		age: '21',
-		team: '大阪体育大学',
+		team: '大阪体育大学'
 	},
 	{
 		id: '31',
@@ -245,7 +245,7 @@ export const startListMen = [
 		firstName: '洸太',
 		gender: '男',
 		age: '21',
-		team: '大阪体育大学',
+		team: '大阪体育大学'
 	},
 	{
 		id: '32',
@@ -253,7 +253,7 @@ export const startListMen = [
 		firstName: '大康',
 		gender: '男',
 		age: '47',
-		team: '東京都トライアスロン連合',
+		team: '東京都トライアスロン連合'
 	},
 	{
 		id: '33',
@@ -261,7 +261,7 @@ export const startListMen = [
 		firstName: '大志',
 		gender: '男',
 		age: '24',
-		team: '東京都トライアスロン連合',
+		team: '東京都トライアスロン連合'
 	},
 	{
 		id: '34',
@@ -269,7 +269,7 @@ export const startListMen = [
 		firstName: '晃',
 		gender: '男',
 		age: '27',
-		team: '東京都トライアスロン連合',
+		team: '東京都トライアスロン連合'
 	},
 	{
 		id: '35',
@@ -277,7 +277,7 @@ export const startListMen = [
 		firstName: '真生',
 		gender: '男',
 		age: '22',
-		team: '順天堂大学',
+		team: '順天堂大学'
 	},
 	{
 		id: '36',
@@ -285,7 +285,7 @@ export const startListMen = [
 		firstName: '優志',
 		gender: '男',
 		age: '23',
-		team: '日本大学',
+		team: '日本大学'
 	},
 	{
 		id: '37',
@@ -293,7 +293,7 @@ export const startListMen = [
 		firstName: '翔斗',
 		gender: '男',
 		age: '23',
-		team: '千葉大学',
+		team: '千葉大学'
 	},
 	{
 		id: '38',
@@ -301,7 +301,7 @@ export const startListMen = [
 		firstName: '優希',
 		gender: '男',
 		age: '21',
-		team: '東北大学',
+		team: '東北大学'
 	},
 	{
 		id: '39',
@@ -309,7 +309,7 @@ export const startListMen = [
 		firstName: '空我',
 		gender: '男',
 		age: '20',
-		team: '東海大学',
+		team: '東海大学'
 	},
 	{
 		id: '40',
@@ -317,7 +317,7 @@ export const startListMen = [
 		firstName: '慎一',
 		gender: '男',
 		age: '28',
-		team: '千葉県トライアスロン連合',
+		team: '千葉県トライアスロン連合'
 	},
 	{
 		id: '41',
@@ -325,7 +325,7 @@ export const startListMen = [
 		firstName: '剛太',
 		gender: '男',
 		age: '24',
-		team: '静岡県トライアスロン協会',
+		team: '静岡県トライアスロン協会'
 	},
 	{
 		id: '42',
@@ -333,7 +333,7 @@ export const startListMen = [
 		firstName: '翼',
 		gender: '男',
 		age: '49',
-		team: '千葉県トライアスロン連合',
+		team: '千葉県トライアスロン連合'
 	},
 	{
 		id: '43',
@@ -341,7 +341,7 @@ export const startListMen = [
 		firstName: '龍之介',
 		gender: '男',
 		age: '17',
-		team: '東京都トライアスロン連合',
+		team: '東京都トライアスロン連合'
 	},
 	{
 		id: '44',
@@ -349,7 +349,7 @@ export const startListMen = [
 		firstName: '太賀',
 		gender: '男',
 		age: '18',
-		team: '福岡県トライアスロン連合',
+		team: '福岡県トライアスロン連合'
 	},
 	{
 		id: '45',
@@ -357,7 +357,7 @@ export const startListMen = [
 		firstName: '萩',
 		gender: '男',
 		age: '22',
-		team: '駒澤大学',
+		team: '駒澤大学'
 	},
 	{
 		id: '46',
@@ -365,7 +365,7 @@ export const startListMen = [
 		firstName: '皓介',
 		gender: '男',
 		age: '20',
-		team: '法政大学',
+		team: '法政大学'
 	},
 	{
 		id: '47',
@@ -373,7 +373,7 @@ export const startListMen = [
 		firstName: '龍成',
 		gender: '男',
 		age: '21',
-		team: '立命館大学',
+		team: '立命館大学'
 	},
 	{
 		id: '48',
@@ -381,7 +381,7 @@ export const startListMen = [
 		firstName: '聡',
 		gender: '男',
 		age: '24',
-		team: '神奈川県トライアスロン連合',
+		team: '神奈川県トライアスロン連合'
 	},
 	{
 		id: '49',
@@ -389,7 +389,7 @@ export const startListMen = [
 		firstName: '輝',
 		gender: '男',
 		age: '26',
-		team: '千葉県トライアスロン連合',
+		team: '千葉県トライアスロン連合'
 	},
 	{
 		id: '50',
@@ -397,7 +397,7 @@ export const startListMen = [
 		firstName: '達也',
 		gender: '男',
 		age: '22',
-		team: '中央大学',
+		team: '中央大学'
 	},
 	{
 		id: '51',
@@ -405,7 +405,7 @@ export const startListMen = [
 		firstName: '康太',
 		gender: '男',
 		age: '21',
-		team: '東北大学',
+		team: '東北大学'
 	},
 	{
 		id: '52',
@@ -413,7 +413,7 @@ export const startListMen = [
 		firstName: '彪己',
 		gender: '男',
 		age: '21',
-		team: '筑波大学',
+		team: '筑波大学'
 	},
 	{
 		id: '53',
@@ -421,7 +421,7 @@ export const startListMen = [
 		firstName: '晃大',
 		gender: '男',
 		age: '31',
-		team: '静岡県トライアスロン協会',
+		team: '静岡県トライアスロン協会'
 	},
 	{
 		id: '54',
@@ -429,7 +429,7 @@ export const startListMen = [
 		firstName: '丈',
 		gender: '男',
 		age: '21',
-		team: '国士舘大学',
+		team: '国士舘大学'
 	},
 	{
 		id: '56',
@@ -437,7 +437,7 @@ export const startListMen = [
 		firstName: '想太',
 		gender: '男',
 		age: '21',
-		team: '大阪体育大学',
+		team: '大阪体育大学'
 	},
 	{
 		id: '57',
@@ -445,7 +445,7 @@ export const startListMen = [
 		firstName: '敬之',
 		gender: '男',
 		age: '23',
-		team: '長崎大学',
+		team: '長崎大学'
 	},
 	{
 		id: '58',
@@ -453,7 +453,7 @@ export const startListMen = [
 		firstName: '怜央',
 		gender: '男',
 		age: '20',
-		team: '立命館大学',
+		team: '立命館大学'
 	},
 	{
 		id: '59',
@@ -461,7 +461,7 @@ export const startListMen = [
 		firstName: '隼斗',
 		gender: '男',
 		age: '22',
-		team: '立命館大学',
+		team: '立命館大学'
 	},
 	{
 		id: '60',
@@ -469,7 +469,7 @@ export const startListMen = [
 		firstName: '大樹',
 		gender: '男',
 		age: '22',
-		team: '国際武道大学',
+		team: '国際武道大学'
 	},
 	{
 		id: '61',
@@ -477,7 +477,7 @@ export const startListMen = [
 		firstName: '遼祐',
 		gender: '男',
 		age: '22',
-		team: '筑波大学',
+		team: '筑波大学'
 	},
 	{
 		id: '62',
@@ -485,7 +485,7 @@ export const startListMen = [
 		firstName: '悠輝',
 		gender: '男',
 		age: '24',
-		team: '神奈川県トライアスロン連合',
+		team: '神奈川県トライアスロン連合'
 	},
 	{
 		id: '63',
@@ -493,7 +493,7 @@ export const startListMen = [
 		firstName: '陸人',
 		gender: '男',
 		age: '21',
-		team: '立命館大学',
+		team: '立命館大学'
 	},
 	{
 		id: '64',
@@ -501,7 +501,7 @@ export const startListMen = [
 		firstName: '俊介',
 		gender: '男',
 		age: '22',
-		team: '広島大学',
+		team: '広島大学'
 	},
 	{
 		id: '65',
@@ -509,7 +509,7 @@ export const startListMen = [
 		firstName: '泰斗',
 		gender: '男',
 		age: '23',
-		team: '慶應義塾大学',
+		team: '慶應義塾大学'
 	},
 	{
 		id: '66',
@@ -517,7 +517,7 @@ export const startListMen = [
 		firstName: '颯人',
 		gender: '男',
 		age: '20',
-		team: '筑波大学',
+		team: '筑波大学'
 	},
 	{
 		id: '67',
@@ -525,7 +525,7 @@ export const startListMen = [
 		firstName: '涼太',
 		gender: '男',
 		age: '21',
-		team: '筑波大学',
+		team: '筑波大学'
 	},
 	{
 		id: '68',
@@ -533,7 +533,7 @@ export const startListMen = [
 		firstName: '爽太',
 		gender: '男',
 		age: '25',
-		team: '京都府トライアスロン協会',
+		team: '京都府トライアスロン協会'
 	},
 	{
 		id: '69',
@@ -541,7 +541,7 @@ export const startListMen = [
 		firstName: '和主也',
 		gender: '男',
 		age: '21',
-		team: '同志社大学',
+		team: '同志社大学'
 	},
 	{
 		id: '70',
@@ -549,7 +549,7 @@ export const startListMen = [
 		firstName: '裕介',
 		gender: '男',
 		age: '23',
-		team: '広島大学',
+		team: '広島大学'
 	},
 	{
 		id: '71',
@@ -557,7 +557,7 @@ export const startListMen = [
 		firstName: '慎吾',
 		gender: '男',
 		age: '20',
-		team: '広島大学',
+		team: '広島大学'
 	},
 	{
 		id: '72',
@@ -565,7 +565,7 @@ export const startListMen = [
 		firstName: '人誠',
 		gender: '男',
 		age: '21',
-		team: '同志社大学',
+		team: '同志社大学'
 	},
 	{
 		id: '73',
@@ -573,7 +573,7 @@ export const startListMen = [
 		firstName: '祥汰',
 		gender: '男',
 		age: '20',
-		team: '同志社大学',
+		team: '同志社大学'
 	},
 	{
 		id: '74',
@@ -581,7 +581,7 @@ export const startListMen = [
 		firstName: '一太',
 		gender: '男',
 		age: '21',
-		team: '慶應義塾大学',
+		team: '慶應義塾大学'
 	},
 	{
 		id: '75',
@@ -589,7 +589,7 @@ export const startListMen = [
 		firstName: '唯人',
 		gender: '男',
 		age: '22',
-		team: '国士舘大学',
+		team: '国士舘大学'
 	},
 	{
 		id: '76',
@@ -597,7 +597,7 @@ export const startListMen = [
 		firstName: '大門',
 		gender: '男',
 		age: '21',
-		team: '国士舘大学',
+		team: '国士舘大学'
 	},
 	{
 		id: '77',
@@ -605,7 +605,7 @@ export const startListMen = [
 		firstName: '宏明',
 		gender: '男',
 		age: '20',
-		team: '慶應義塾大学',
+		team: '慶應義塾大学'
 	},
 	{
 		id: '78',
@@ -613,7 +613,7 @@ export const startListMen = [
 		firstName: '諒太',
 		gender: '男',
 		age: '23',
-		team: '東海大学',
+		team: '東海大学'
 	},
 	{
 		id: '79',
@@ -621,6 +621,6 @@ export const startListMen = [
 		firstName: '煕隆',
 		gender: '男',
 		age: '23',
-		team: '早稲田大学',
-	},
+		team: '早稲田大学'
+	}
 ];

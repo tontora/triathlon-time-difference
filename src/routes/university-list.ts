@@ -22,7 +22,7 @@ export class UniversityRow {
 		if (!sortedTimes[2]) return;
 		const threeAthletes = sortedTimes.slice(0, 3);
 		return {
-			time: threeAthletes.map((x) => x).reduce((sum, element) => sum! + element!)!,
+			time: threeAthletes.map((x) => x).reduce((sum, element) => sum! + element!)!
 		};
 	}
 }

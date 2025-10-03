@@ -1,0 +1,32 @@
+name: PR Check (Type Check & Lint)
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
+
+jobs:
+  type-and-lint-check:
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: setup node.js
+        uses: actions/setup-node@v3.6.0
+
+      # package.jsonの内容でパッケージインストール
+      - name: setup app env
+        run: npm i
+
+      - name: lint
+        run: npm run lint
+
+      - name: check
+        run: npm run check

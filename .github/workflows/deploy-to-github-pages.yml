@@ -2,7 +2,7 @@ name: deploy-to-github-pages
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ['main']
   workflow_dispatch:
 
 jobs:
@@ -14,15 +14,21 @@ jobs:
 
       - name: setup node.js
         uses: actions/setup-node@v3.6.0
-      
+
       # package.jsonの内容でパッケージインストール
       - name: setup app env
         run: npm i
-      
+
+      - name: lint
+        run: npm run lint
+
+      - name: check
+        run: npm run check
+
       # ビルド実行、静的リソースを作る
       - name: build static resources
         run: npm run build
-          
+
       # GitHub Pagesにデプロイする
       - name: deploy to github pages
         uses: peaceiris/actions-gh-pages@v3
