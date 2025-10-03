@@ -5,7 +5,7 @@ export const startListWomen = [
 		firstName: 'あまね',
 		gender: '女',
 		age: '24',
-		team: '神奈川県トライアスロン連合',
+		team: '神奈川県トライアスロン連合'
 	},
 	{
 		id: '82',
@@ -13,7 +13,7 @@ export const startListWomen = [
 		firstName: 'はるか',
 		gender: '女',
 		age: '24',
-		team: '日本体育大学',
+		team: '日本体育大学'
 	},
 	{
 		id: '83',
@@ -21,7 +21,7 @@ export const startListWomen = [
 		firstName: '果南',
 		gender: '女',
 		age: '21',
-		team: '日本体育大学',
+		team: '日本体育大学'
 	},
 	{
 		id: '84',
@@ -29,7 +29,7 @@ export const startListWomen = [
 		firstName: '美奈',
 		gender: '女',
 		age: '22',
-		team: '千葉県立保健医療大学',
+		team: '千葉県立保健医療大学'
 	},
 	{
 		id: '85',
@@ -37,7 +37,7 @@ export const startListWomen = [
 		firstName: '郁美',
 		gender: '女',
 		age: '21',
-		team: '順天堂大学',
+		team: '順天堂大学'
 	},
 	{
 		id: '86',
@@ -45,7 +45,7 @@ export const startListWomen = [
 		firstName: '菜央',
 		gender: '女',
 		age: '30',
-		team: '鹿児島県トライアスロン連合',
+		team: '鹿児島県トライアスロン連合'
 	},
 	{
 		id: '87',
@@ -53,7 +53,7 @@ export const startListWomen = [
 		firstName: '茉彩',
 		gender: '女',
 		age: '25',
-		team: '千葉県トライアスロン連合',
+		team: '千葉県トライアスロン連合'
 	},
 	{
 		id: '88',
@@ -61,7 +61,7 @@ export const startListWomen = [
 		firstName: '唯',
 		gender: '女',
 		age: '20',
-		team: '東北大学',
+		team: '東北大学'
 	},
 	{
 		id: '89',
@@ -69,7 +69,7 @@ export const startListWomen = [
 		firstName: 'はな',
 		gender: '女',
 		age: '20',
-		team: '東北大学',
+		team: '東北大学'
 	},
 	{
 		id: '90',
@@ -77,7 +77,7 @@ export const startListWomen = [
 		firstName: '陽南子',
 		gender: '女',
 		age: '21',
-		team: '東北大学',
+		team: '東北大学'
 	},
 	{
 		id: '91',
@@ -85,7 +85,7 @@ export const startListWomen = [
 		firstName: '真依',
 		gender: '女',
 		age: '21',
-		team: '東北大学',
+		team: '東北大学'
 	},
 	{
 		id: '92',
@@ -93,7 +93,7 @@ export const startListWomen = [
 		firstName: '果子',
 		gender: '女',
 		age: '20',
-		team: '東北大学',
+		team: '東北大学'
 	},
 	{
 		id: '93',
@@ -101,7 +101,7 @@ export const startListWomen = [
 		firstName: '沙彩',
 		gender: '女',
 		age: '21',
-		team: '立命館大学',
+		team: '立命館大学'
 	},
 	{
 		id: '94',
@@ -109,7 +109,7 @@ export const startListWomen = [
 		firstName: '真由',
 		gender: '女',
 		age: '20',
-		team: '順天堂大学',
+		team: '順天堂大学'
 	},
 	{
 		id: '95',
@@ -117,7 +117,7 @@ export const startListWomen = [
 		firstName: '佑莉愛',
 		gender: '女',
 		age: '20',
-		team: '大阪体育大学',
+		team: '大阪体育大学'
 	},
 	{
 		id: '96',
@@ -125,7 +125,7 @@ export const startListWomen = [
 		firstName: 'らら',
 		gender: '女',
 		age: '21',
-		team: '東海大学',
+		team: '東海大学'
 	},
 	{
 		id: '97',
@@ -133,7 +133,7 @@ export const startListWomen = [
 		firstName: '藍',
 		gender: '女',
 		age: '19',
-		team: '順天堂大学',
+		team: '順天堂大学'
 	},
 	{
 		id: '98',
@@ -141,7 +141,7 @@ export const startListWomen = [
 		firstName: '瑛未',
 		gender: '女',
 		age: '20',
-		team: '順天堂大学',
+		team: '順天堂大学'
 	},
 	{
 		id: '99',
@@ -149,7 +149,7 @@ export const startListWomen = [
 		firstName: '優里',
 		gender: '女',
 		age: '21',
-		team: '日本体育大学',
+		team: '日本体育大学'
 	},
 	{
 		id: '100',
@@ -157,7 +157,7 @@ export const startListWomen = [
 		firstName: '花梨',
 		gender: '女',
 		age: '21',
-		team: '立命館大学',
+		team: '立命館大学'
 	},
 	{
 		id: '101',
@@ -165,7 +165,7 @@ export const startListWomen = [
 		firstName: '寛乃',
 		gender: '女',
 		age: '21',
-		team: '立命館大学',
+		team: '立命館大学'
 	},
 	{
 		id: '102',
@@ -173,6 +173,6 @@ export const startListWomen = [
 		firstName: '華',
 		gender: '女',
 		age: '20',
-		team: '同志社大学',
-	},
+		team: '同志社大学'
+	}
 ];

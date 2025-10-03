@@ -5,7 +5,7 @@
 		ComboBox,
 		DataTable,
 		RadioButton,
-		RadioButtonGroup,
+		RadioButtonGroup
 	} from 'carbon-components-svelte';
 	import { startListMen } from './start-list-men';
 	import { startListWomen } from './start-list-women';
@@ -24,15 +24,15 @@
 
 	$: startList = (gender ? startLists[gender] : []).map((x) => ({
 		...x,
-		name: `${x.lastName} ${x.firstName}`,
+		name: `${x.lastName} ${x.firstName}`
 	}));
 
-	$: tableHeaders = [
+	const tableHeaders = [
 		{ key: 'name', value: '大学' },
 		...[...Array(maxCount)].map((_item, index) => ({
 			key: `time${index}`,
-			value: String(index),
-		})),
+			value: String(index)
+		}))
 	];
 
 	function getElapsedTime() {
@@ -71,7 +71,7 @@
 
 	function filterRow(rows: UniversityRow[]) {
 		return rows.filter(
-			(university) => university.athletes.length >= 3 && university.name.includes('大学'),
+			(university) => university.athletes.length >= 3 && university.name.includes('大学')
 		);
 	}
 
@@ -79,7 +79,7 @@
 		return rows.map((row, index) => {
 			let rowObject: Record<string, string> & { id: string } = {
 				name: row.name.slice(0, -2),
-				id: String(index),
+				id: String(index)
 			};
 			for (let i = 0; i < maxCount; i++) {
 				rowObject[`time${i}`] = timeToString(row.getTeamTime(i)?.time);
@@ -112,7 +112,7 @@
 		items={startList.map((item) => ({
 			...item,
 			text: `${item.id}: ${item.name} : ${item.team}`,
-			key: item.id,
+			key: item.id
 		}))}
 		shouldFilterItem={(item, value) => {
 			if (!value) return true;
