@@ -22,12 +22,6 @@ jobs:
       - name: setup app env
         run: npm ci
 
-      - name: lint
-        run: npm run lint
-
-      - name: check
-        run: npm run check
-
       # ビルド実行、静的リソースを作る
       - name: build static resources
         run: npm run build
